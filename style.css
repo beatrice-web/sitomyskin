@@ -1,0 +1,682 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Chetta Vissto';
+    src: url('chettavissto.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #fdfaf7; 
+}
+
+
+h1, h2, h3 {
+    font-family: 'Inter',serif;
+}
+
+
+.nomesito a, 
+.logo a,
+.hero-text h1 {
+    font-family: 'Chetta Vissto', sans-serif !important;
+}
+
+/* ==========================================================================
+   NAVBAR
+   ========================================================================== */
+nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    padding: 30px 10%;              
+    background-color: #ffffff;      
+}
+
+.nomesito a {
+    font-size: 24px;
+    font-weight: 700;
+    color: #131F67;                
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;                      
+}
+
+.nav-links a {
+    font-size: 16px;
+    color: #131F67;                 
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c48b71;                 
+}
+/* --- PAGINA ATTIVA NELLA NAVBAR --- */
+.nav-links a.active {
+    color: #ab775f;            /* Colore pesca/marrone caldo coerente con il tuo brand */
+    font-weight: 700;          /* Rende il testo più spesso (bold) per dare enfasi */
+    border-bottom: 2px solid #c48b71; /* Opzionale: aggiunge una linea sottile sotto la voce attiva */
+    padding-bottom: 4px;       /* Spazio tra il testo e la linea sotto */
+}
+/* ==========================================================================
+   STRUTTURA MAIN E SEZIONI (Layout per Desktop)
+   ========================================================================== */
+main {
+    display: block;
+}
+
+/* Spaziatura standard per tutte le sezioni principali */
+.hero, .intro, .cardhome, .home, .storiahome, .tipi-pelle-sezione {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 80px;
+}
+
+/* --- 1. HERO SECTION --- */
+.hero {
+    display: flex;
+    background-color: #fcefe6; 
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    gap: 5%;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: #1a2a5a;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text h4 {
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.hero .img {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.intro {
+    max-width: 70%; 
+}
+
+.intro p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #1a2a5a;
+}
+
+
+.cardhome h2 {
+    color: #1a2a5a;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card1 
+ {
+    background-color: #f9f5f0; 
+    padding: 30px 24px;       
+    border-radius: 16px;      
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  
+    text-align: left;
+    text-decoration: none; 
+    transition: transform 0.2s ease, background-color 0.2s ease; 
+}
+
+.card1:hover, .card-pelle
+ {
+    background-color: #f5ede4; 
+    transform: translateY(-4px); 
+}
+
+.card-icon {
+    margin-bottom: 20px;      
+    display: flex;
+}
+
+.card-icon img {
+    width: 45px;              
+    height: 45px;
+    object-fit: contain;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;                
+    width: 100%;
+}
+
+.card1 h3 {
+    font-size: 18px;
+    color: #131F67;           
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;                
+}
+
+.card1 p {
+    font-size: 14px;
+    color: #4a5568;           
+    line-height: 1.5;
+    margin: 0;
+}
+
+.home {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+}
+
+.toplist {
+    flex: 1;
+}
+
+.toplist h2 {
+    font-size: 32px;
+    color: #1a2a5a;
+    margin-bottom: 20px;
+}
+
+.toplist p {
+    font-size: 16px;
+    color: #4a5568;
+    margin-bottom: 20px;
+}
+
+.img {
+    flex: 1;
+    width: 50%;
+    height: 350px;
+    display: block;
+    object-fit: cover;
+}
+
+/* --- 4B. NUOVA SEZIONE AUTONOMA TIPI DI PELLE (Sotto l'immagine) --- */
+.tipi-pelle-sezione {
+    width: 100%;
+    clear: both;
+}
+
+.tipi-pelle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    width: 100%;
+}
+
+.card-pelle {
+    background-color: #f9f5f0; 
+    padding: 25px 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.num-pelle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #a0aec0; 
+}
+
+.pelle-link {
+    font-size: 15px;
+    font-weight: 700;
+    color: #131F67;
+    text-decoration: underline; 
+    line-height: 1.3;
+}
+
+.pelle-link:hover {
+    color: #c48b71;
+}
+
+.card-pelle p {
+    font-size: 13px;
+    color: #718096;
+    margin: 0 !important;
+    line-height: 1.4;
+}
+
+/* --- BOTTONI GENERALI --- */
+.button {
+    display: inline-block;
+    background-color: #1a2a5a;
+    color: #ffffff;
+    border: none;
+    padding: 12px 35px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 25px; 
+}
+
+.button:hover {
+    background-color: #c48b71;
+}
+.itinerary-list {
+    list-style-type: initial;
+    padding-left: 20px;
+    margin-bottom: 30px; /* Aumentato da 20px a 30px per spingere il bottone ancora più giù */
+    color: #4a5568;
+}
+/* --- 5. SEZIONE STORIAHOME / STEP --- */
+.header-storia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0; 
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.header-storia h2 {
+    font-size: 32px;
+    color: #1a2a5a;
+    max-width: 60%;
+}
+
+.header-storia-centrato {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header-storia-centrato h2 {
+    font-size: 32px;
+    color: #1a2a5a;
+    max-width: 100%;
+}
+
+.card-container-numerati {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card-storia {
+    background-color: #fcf8f5;
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.numero {
+    font-size: 24px;
+    color: #a0aec0;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.card-storia h3 {
+    font-size: 18px;
+    color: #1a2a5a;
+    line-height: 1.3;
+}
+
+.card-storia p {
+    font-size: 14px;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.icon-sub {
+    font-size: 20px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #1a2a5a; 
+    padding: 40px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .logo a {
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+footer .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 14px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+footer .nav-links a:hover {
+    opacity: 1;
+}
+
+body.detail-page {
+    background-color: #fcefe7; /* Tonalità rosa cipria chiarissimo dello screenshot */
+}
+
+
+.detail-hero {
+    display: flex;
+    padding: 60px 10%;
+    align-items: center;
+    gap: 8%;
+}
+
+.detail-hero-img {
+    flex: 1;
+}
+
+.detail-hero-img img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.detail-hero-text {
+    flex: 1.2;
+}
+
+.detail-hero-text h1 {
+    font-family: 'Chetta Vissto', sans-serif !important;
+    font-size: 54px;
+    color: #131F67;
+    margin-bottom: 25px;
+}
+
+.detail-hero-text p {
+    font-size: 16px;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+.scelte-sezione, .consigli-sezione {
+    padding: 0 10%;
+    margin-bottom: 60px;
+}
+
+.scelte-sezione h2, .consigli-sezione h2 {
+    font-family: 'Inter', serif;
+    font-size: 28px;
+    color: #131F67;
+    margin-bottom: 40px;
+}
+
+
+.detail-list {
+    list-style-type: initial;
+    padding-left: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.detail-list li {
+    font-size: 13px;
+    color: #4a5568;
+    line-height: 1.4;
+}
+
+
+.texture-gallery {
+    padding: 0 10%;
+    margin-bottom: 80px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+.next-skin-section {
+    padding: 0 10%;
+    margin-bottom: 100px;
+}
+
+.next-skin-box {
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    gap: 5%;
+}
+
+.next-text {
+    flex: 1.2;
+}
+
+.next-text h2 {
+    font-family: 'Chetta Vissto', sans-serif !important;
+    font-size: 48px;
+    color: #131F67;
+    margin-bottom: 20px;
+}
+
+.next-text p {
+    font-size: 16px;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.next-img {
+    flex: 1;
+}
+
+.next-img img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+.button-dark {
+    display: inline-block;
+    background-color: #131F67;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'DM Sans', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.button-dark:hover {
+    background-color: #c48b71;
+}
+
+
+@media screen and (max-width: 768px) {
+    .detail-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+        gap: 30px;
+    }
+    
+    .detail-hero-text h1 {
+        font-size: 40px;
+    }
+
+    .scelte-sezione, .consigli-sezione, .texture-gallery, .next-skin-section {
+        padding: 0 5%;
+        margin-bottom: 50px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .next-skin-box {
+        flex-direction: column-reverse;
+        text-align: left;
+        gap: 30px;
+    }
+    
+    .next-text h2 {
+        font-size: 36px;
+    }
+    .header-storia-centrato {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .hero, .intro, .cardhome, .home, .storiahome, .tipi-pelle-sezione, nav, footer {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-bottom: 50px; 
+    }
+
+    nav {
+        flex-direction: column; 
+        gap: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .nav-links {
+        font-size: 14px;
+        gap: 15px;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .hero .img {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px; 
+    }
+
+    .intro {
+        max-width: 100%; 
+    }
+
+    .intro p {
+        font-size: 18px;
+    }
+
+    .card-container, .card-container-numerati, .tipi-pelle-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+
+    .home {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .home:nth-of-type(odd) {
+        flex-direction: column-reverse;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+    .header-storia {
+        flex-direction: column;
+        align-items: flex-start; 
+        gap: 15px;
+    }
+
+    .header-storia h2 {
+        max-width: 100%;
+        font-size: 26px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    footer .nav-links a {
+        margin: 0 15px; 
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .gallery-grid img {
+        height: auto; 
+        max-height: 300px; 
+        width: 100%;
+    }
+
+    .next-img img {
+        height: auto; 
+        max-height: 240px;
+    }
+}
