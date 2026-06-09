@@ -7,16 +7,26 @@
     <link rel="stylesheet" href="style.css">
    
 <body>
-    <nav>
+     <nav>
         <div class="nomesito"> 
             <a href="index.html">my Skin</a> 
         </div> 
-        <div class="nav-links">
-            <a href="skincarebase.html" class="active">Skincare base</a>
-            <a href="trattamentiviso.html">Trattamenti viso</a>
-            <a href="prodotti.html">Prodotti</a>
-            <a href="erroricomuni.html">Errori comuni</a>
-        </div> 
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="skincarebase.html" class="active">Skincare base</a>
+                <ul class="dropdown-menu">
+                    <li><a href="pellenormale.html">Skincare routine pelle normale</a></li>
+                    <li><a href="pellemista.html">Skincare routine pelle mista</a></li>
+                    <li><a href="pellegrassa.html">Skincare routine pelle grassa</a></li>
+                    <li><a href="pellesecca.html">Skincare routine pelle secca</a></li>
+                    <li><a href="pellesensibile.html">Skincare routine pelle sensibile</a></li>
+                    <li><a href="pelleacneica.html">Skincare routine pelle acneica</a></li>
+                </ul>
+            </li>
+            <li><a href="trattamentiviso.html">Trattamenti viso</a></li>
+            <li><a href="prodotti.html">Prodotti</a></li>
+            <li><a href="erroricomuni.html">Errori comuni</a></li>
+        </ul> 
     </nav>
     
     <main>
@@ -29,7 +39,8 @@
         </section>
 
         <section class="intro">
-            <p>La skincare non è una moda — è una pratica quotidiana che protegge la salute della pelle nel tempo. Non serve una routine complicata: bastano pochi passi costanti e prodotti adatti al proprio tipo di pelle.</p>
+            <p>La skincare non è una moda — è una pratica quotidiana che protegge la salute della pelle nel tempo.
+                <br> Non serve una routine complicata: bastano pochi passi costanti e prodotti adatti al proprio tipo di pelle.</p>
         </section>
 
         <section class="storiahome">
@@ -41,17 +52,25 @@
                 <div class="card-storia">
                     <span class="numero">01 <span class="icon-sub"></span></span>
                     <h3>Detersione</h3>
-                    <p>Rimuove impurità, sebo in eccesso e residui di trucco senza alterare il film idrolipidico della pelle. È il punto di partenza indispensabile per qualsiasi routine.<br><br><strong>Consiglio:</strong> usa un detergente delicato in gel o in mousse. Risciacqua con acqua tiepida, mai calda.</p>
+                    <p>Rimuove impurità, sebo in eccesso e residui di trucco senza alterare il film idrolipidico della pelle. È il punto di partenza indispensabile per qualsiasi routine.
+                    <br>
+                    <br><strong>Consiglio:</strong> usa un detergente delicato in gel o in mousse. Risciacqua con acqua tiepida, mai calda.</p>
                 </div>
                 <div class="card-storia">
                     <span class="numero">02 <span class="icon-sub"></span></span>
                     <h3>Idratazione</h3>
-                    <p>Nutre la pelle e ripristina il corretto equilibrio idrico. Va applicata ogni giorno, anche se la pelle è grassa.<br><br><br><strong>Consiglio:</strong> applica su pelle ancora umida per massimizzare l'assorbimento degli attivi.</p>
+                    <p>Nutre la pelle e ripristina il corretto equilibrio idrico. Va applicata ogni giorno, anche se la pelle è grassa.
+                    <br>
+                    <br>
+                    <br><strong>Consiglio:</strong> applica su pelle ancora umida per massimizzare l'assorbimento degli attivi.</p>
                 </div>
                 <div class="card-storia">
                     <span class="numero">03 <span class="icon-sub"></span></span>
                     <h3>Protezione</h3>
-                    <p>La protezione solare è lo step più importante della routine mattutina. I raggi UVA e UVB agiscono anche attraverso le nuvole e i vetri.<br><br><strong>Consiglio:</strong> usa sempre SPF 30 o 50+, anche d'inverno e nei giorni nuvolosi.</p>
+                    <p>La protezione solare è lo step più importante della routine mattutina. I raggi UVA e UVB agiscono anche attraverso le nuvole e i vetri.
+                    <br>
+                    <br>
+                    <br><strong>Consiglio:</strong> usa sempre SPF 30 o 50+, anche d'inverno e nei giorni nuvolosi.</p>
                 </div>
             </div>
         </section>
@@ -102,7 +121,7 @@
         </section>
 
         <section class="home">
-            <div class="toplist">
+            <div class="toplist-trattamenti">
                 <h2>Prendersi cura<br>nel profondo</h2>
                 <p>Dall'idratazione profonda all'anti-età scopri i trattamenti più efficaci per ogni esigenza cutanea.</p>
                 <a href="trattamentiviso.html"><button class="button">Scopri di più</button></a>

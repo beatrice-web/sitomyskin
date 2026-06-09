@@ -3,26 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skincare Base - my Skin</title>
+    <title>Errori Comuni - my Skin</title>
     <link rel="stylesheet" href="style.css">
-   
+</head>
 <body>
-    <nav>
+     <nav>
         <div class="nomesito"> 
             <a href="index.html">my Skin</a> 
         </div> 
-        <div class="nav-links">
-            <a href="skincarebase.html">Skincare base</a>
-            <a href="trattamentiviso.html"
-            >Trattamenti viso</a>
-            <a href="prodotti.html">Prodotti</a>
-            <a href="erroricomuni.html" class="active"
-            >Errori comuni</a>
-        </div> 
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="skincarebase.html">Skincare base</a>
+                <ul class="dropdown-menu">
+                    <li><a href="pellenormale.html">Skincare routine pelle normale</a></li>
+                    <li><a href="pellemista.html">Skincare routine pelle mista</a></li>
+                    <li><a href="pellegrassa.html">Skincare routine pelle grassa</a></li>
+                    <li><a href="pellesecca.html">Skincare routine pelle secca</a></li>
+                    <li><a href="pellesensibile.html">Skincare routine pelle sensibile</a></li>
+                    <li><a href="pelleacneica.html">Skincare routine pelle acneica</a></li>
+                </ul>
+            </li>
+            <li><a href="trattamentiviso.html">Trattamenti viso</a></li>
+            <li><a href="prodotti.html">Prodotti</a></li>
+            <li><a href="erroricomuni.html" class="active">Errori comuni</a></li>
+        </ul> 
     </nav>
     
     <main>
-    
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Errori<br>comuni</h1>
+                <h4>Piccoli gesti quotidiani che possono danneggiare la pelle senza che tu te ne accorga. 
+                <br>
+                <br> Scopri come riconoscerli e correggerli.</h4>
+            </div>
+            <img src="foto9.png" class="img" alt="Applicazione siero viso">
+        </section>
+
+        <section class="intro">
+            <p>Una corretta routine di skincare è fundamental per mantenere la pelle sana e luminosa, 
+                ma spesso piccoli comportamenti quotidiani possono comprometterne l’efficacia. 
+                È importante conoscere le esigenze della propria pelle e adottare abitudini mirate, 
+                evitando eccessi o superficialità.</p>
+        </section>
+
+        <section class="storiahome">
+            <div class="header-storia-centrato">
+                <h2>Scopri i sei errori di skincare più comuni</h2>
+            </div>
+
+            <div class="card-container-numerati">
+                <div class="card-storia">
+                    <span class="numero">01 <span class="icon-sub"></span></span>
+                    <h3>Conosci la tua pelle?</h3>
+                    <p>Ogni pelle ha esigenze diverse e non può essere trattata allo stesso modo.
+                    È importante scegliere prodotti adatti alla propria tipologia. Una skincare efficace si basa su consapevolezza, 
+                    semplicità e costanza.</p>
+                </div>
+                
+                <div class="card-storia">
+                    <span class="numero">02 <span class="icon-sub"></span></span>
+                    <h3>Usare un solo prodotto per tutto il viso</h3>
+                    <p>Spesso si tende a utilizzare gli stessi prodotti su tutto il viso, senza considerare che ogni zona ha esigenze diverse. 
+                    Una skincare efficace deve adattarsi ai bisogni specifici della pelle per un risultato equilibrato e luminoso.</p>
+                </div>
+
+                <div class="card-storia">
+                    <span class="numero">03 <span class="icon-sub"></span></span>
+                    <h3>Eccedi con scrub e prodotti esfolianti?</h3>
+                    <p>L’esfoliazione aiuta a rinnovare la pelle eliminando impurità e cellule morte, ma deve essere delicata.
+                       Un uso eccessivo può irritare la pelle e alterarne l’equilibrio, rendendola più sensibile e impura.</p>
+                </div>
+            </div>
+
+            <div class="card-container-numerati" style="margin-bottom: 40px;">
+                <img src="5.png" class="imgfinale" alt="Dettaglio lavaggio viso">
+                <img src="6.png" class="imgfinale" alt="Prodotti skincare sul tavolo">
+                <img src="7.png" class="imgfinale" alt="Scrub e sali esfolianti">
+            </div>
+
+            <div class="card-container-numerati">
+                <div class="card-storia">
+                    <span class="numero">04 <span class="icon-sub"></span></span>
+                    <h3>Usi acqua troppo calda o fredda?</h3>
+                    <p>Usare acqua troppo calda o troppo fredda per lavare il viso può danneggiare la pelle e alterarne l’equilibrio.
+                       È preferibile utilizzare acqua tiepida, più delicata e adatta in ogni stagione.</p>
+                </div>
+                
+                <div class="card-storia">
+                    <span class="numero">05 <span class="icon-sub"></span></span>
+                    <h3>Mantieni puliti i tuoi accessori?</h3>
+                    <p>Gli accessori per il trucco possono accumulare batteri e causare imperfezioni se non puliti correttamente.
+                       È importante mantenere una buona igiene, lavando mani, strumenti e asciugamani con regolarità.</p>
+                </div>
+
+                <div class="card-storia">
+                    <span class="numero">06 <span class="icon-sub"></span></span>
+                    <h3>Occhio agli UV tutto l’anno!</h3>
+                    <p>L’esposizione ai raggi UV è il principale fattore di invecchiamento della pelle, causando rughe e macchie.
+                       Per proteggere la pelle, è importante applicare ogni giorno una crema viso con SPF, anche in città o in montagna.</p>
+                </div>
+            </div>
+
+            <div class="card-container-numerati" style="margin-bottom: 40px;">
+                <img src="schiuma.jpg" class="imgfinale" alt="Lavaggio viso con acqua">
+                <img src="strumenti.jpg" class="imgfinale" alt="Pennelli da trucco e accessori">
+                <img src="errore.jpg" class="imgfinale" alt="Protezione solare applicata">
+            </div>
+        </section>
+
+        <section class="home">
+            <div class="toplist">
+                <p>Prendersi cura della pelle significa più che seguire una routine: significa conoscere le proprie esigenze, rispettare
+                l’equilibrio naturale della cute e proteggersi dai fattori esterni. 
+                <br><br>
+                Con consapevolezza, costanza e piccoli accorgimenti quotidiani, è possibile mantenere la pelle sana, luminosa e giovane nel tempo, valorizzando al massimo il proprio benessere e la propria bellezza naturale.
+                <br><br>
+                Scopri come prenderti cura della tua pelle con una routine personalizzata e i prodotti giusti per te.</p>
+                <a href="trattamentiviso.html"><button class="button">Scopri di più</button></a>
+            </div>
+            <img src="close-up-woman-using-face-cream.jpg" class="img" alt="Boccette e creme skincare">
+        </section>
 
         <footer>
             <div class="logo">

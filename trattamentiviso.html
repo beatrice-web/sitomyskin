@@ -5,23 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skincare Base - my Skin</title>
     <link rel="stylesheet" href="style.css">
-   
+</head>
 <body>
+
     <nav>
         <div class="nomesito"> 
             <a href="index.html">my Skin</a> 
         </div> 
-        <div class="nav-links">
-            <a href="skincarebase.html">Skincare base</a>
-            <a href="trattamentiviso.html" class="active"
-            >Trattamenti viso</a>
-            <a href="prodotti.html">Prodotti</a>
-            <a href="erroricomuni.html">Errori comuni</a>
-        </div> 
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="skincarebase.html">Skincare base</a>
+                <ul class="dropdown-menu">
+                    <li><a href="pellenormale.html">Skincare routine pelle normale</a></li>
+                    <li><a href="pellemista.html">Skincare routine pelle mista</a></li>
+                    <li><a href="pellegrassa.html">Skincare routine pelle grassa</a></li>
+                    <li><a href="pellesecca.html">Skincare routine pelle secca</a></li>
+                    <li><a href="pellesensibile.html">Skincare routine pelle sensibile</a></li>
+                    <li><a href="pelleacneica.html">Skincare routine pelle acneica</a></li>
+                </ul>
+            </li>
+            <li><a href="trattamentiviso.html" class="active">Trattamenti viso</a></li>
+            <li><a href="prodotti.html">Prodotti</a></li>
+            <li><a href="erroricomuni.html">Errori comuni</a></li>
+        </ul> 
     </nav>
     
     <main>
-    
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Trattamenti viso</h1>
+                <h4>Dall'idratazione profonda all'anti-età:
+                    <br>scopri i trattamenti più efficaci per ogni esigenza cutanea.</h4>
+            </div>
+            <img src="foto1.png" class="img" alt="Applicazione siero viso">
+        </section>
+
+        <section class="intro">
+            <p>I trattamenti viso sono procedure specifiche che agiscono in profondità 
+            <br> per risolvere esigenze cutanee particolari: dall'idratazione intensa, al rinnovamento cellulare, fino al controllo del sebo.
+               <br>I trattamenti si effettuano con cadenza settimanale o mensile e usano concentrazioni più elevate di principi attivi.</p>
+        </section>
+
+        <section class="storiahome">
+            <div class="header-storia-centrato">
+                <h2>I quattro trattamenti principali</h2>
+            </div>
+
+            <div class="card-container-trattamenti">
+                <div class="card-storia">
+                    <span class="numero">01 <span class="icon-sub"></span></span>
+                    <h3>Idratazione profonda</h3>
+                    <p>Ripristina il livello ottimale di idratazione con maschere e sieri a base di acido ialuronico e ceramidi.<br><br><br><strong>Consigliato per:</strong> Pelle secca o disidratata.</p>
+                </div>
+                <div class="card-storia">
+                    <span class="numero">02 <span class="icon-sub"></span></span>
+                    <h3>Anti-età</h3>
+                    <p>Protegge la pelle dai danni causati dai raggi UV, prevenendo macchie e invecchiamento precoce.<br><br><br><strong>Consigliato per:</strong> Tutti i tipi di pelle, da applicare ogni mattina.</p>
+                </div>
+                <div class="card-storia">
+                    <span class="numero">03 <span class="icon-sub"></span></span>
+                    <h3>Purificante</h3>
+                    <p>Sigilla l'idratazione e mantiene la pelle morbida ed elastica per tutta la giornata.<br><br><br><br><strong>Consigliato per:</strong> Pelle normale o secca.</p>
+                </div>
+                <div class="card-storia">
+                    <span class="numero">04 <span class="icon-sub"></span></span>
+                    <h3>Illuminante</h3>
+                    <p>Sigilla l'idratazione e mantiene la pelle morbida ed elastica per tutta la giornata.<br><br><br><br><strong>Consigliato per:</strong> Pelle normale o secca.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="home">
+            <img src="img2.png" class="img" alt="Dettaglio texture pelle">
+            
+            <div class="toplist-trattamenti">
+                <h2>A cosa servono i trattamenti viso</h2>
+                
+                <div class="gruppo-elenco-trattamenti">
+                    <p>I trattamenti viso possono avere diversi obiettivi, a seconda delle esigenze della pelle. Possono aiutare a:</p>
+                    <ul class="detail-list-trattamenti">
+                        <li>Purificare e detossinare la pelle</li>
+                        <li>Idratare e nutrire in profondità</li>
+                        <li>Ridurre impurità e imperfezioni</li>
+                        <li>Migliorare tono ed elasticità</li>
+                        <li>Illuminare l’incarnato</li>
+                        <li>Contrastare i segni del tempo</li>
+                    </ul>
+                </div>
+                
+                <p>Ogni pelle è diversa e per questo i trattamenti vengono spesso personalizzati in base al tipo di pelle 
+                   (secca, sensibile, mista, grassa o a tendenza acneica) e agli obiettivi da raggiungere.</p>
+            </div>
+        </section>
+
+
+        <section class="storiahome">
+            <div class="header-storia-centrato">
+                <h2>Il processo in tre fasi</h2>
+            </div>
+
+            <div class="card-container-numerati">
+                <div class="card-storia">
+                    <span class="numero">01 <span class="icon-sub"></span></span>
+                    <h3>Analisi della pelle</h3>
+                    <p>Identificazione del tipo di pelle e delle esigenze specifiche prima di scegliere il trattamento più adatto.</p>
+                </div>
+                <div class="card-storia">
+                    <span class="numero">02 <span class="icon-sub"></span></span>
+                    <h3>Il trattamento</h3>
+                    <p>Applicazione dei prodotti attivi specifici per l'esigenza identificata, con tecnica e tempistiche precise.</p>
+                </div>
+                <div class="card-storia">
+                    <span class="numero">03 <span class="icon-sub"></span></span>
+                    <h3>Routine a casa</h3>
+                    <p>Indicazioni su come mantenere i risultati con una routine domiciliare abbinata al trattamento effettuato.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="storiahome"> 
+            <div class="header-storia-centrato"> 
+                <h2>Prima e dopo il trattamento</h2> 
+                <h3>Consigli pratici per preparare la pelle e prolungare i risultati.</h3> 
+            </div> 
+
+            <div class="card-container-trattamenti-bicolonna"> 
+                <div class="card-storia"> 
+                    <h3>⚠ PRIMA</h3> 
+                    <ul class="lista-prima-dopo">
+                        <li>Evita l'esfoliazione nei 3 giorni precedenti</li>
+                        <li>Non usare retinolo la settimana prima</li>
+                        <li>Assicurati che la pelle sia ben idratata</li>
+                        <li>Comunica eventuali allergie o sensibilità</li>
+                    </ul>
+                </div> 
+
+                <div class="card-storia"> 
+                    <h3>✓ DOPO</h3> 
+                    <ul class="lista-prima-dopo">
+                        <li>Idrata abbondantemente nelle 24 ore successive</li>
+                        <li>Usa sempre SPF 50 dopo trattamenti esfolianti</li>
+                        <li>Evita il sole directo per almeno 48 ore</li>
+                        <li>Segui la routine domiciliare consigliata</li>
+                    </ul>
+                </div> 
+            </div> 
+        </section>
+
+       <section class="home">
+            <div class="toplist-trattamenti">
+                <h2>Prodotti abbinati<br>ai trattamenti</h2>
+                <p>Per ottenere risultati visibili e duraturi nel tempo, ogni trattamento ha i suoi prodotti alleati.</p>
+                <a href="prodotti.html"><button class="button">Scopri di più</button></a>
+            </div>
+            <img src="20.png" class="img" alt="Boccette e creme skincare">
+        </section>
 
         <footer>
             <div class="logo">

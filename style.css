@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -15,13 +14,14 @@
 body {
     font-family: 'DM Sans', sans-serif;
     background-color: #fdfaf7; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
 }
-
 
 h1, h2, h3 {
-    font-family: 'Inter',serif;
+    font-family: 'Inter', sans-serif;
 }
-
 
 .nomesito a, 
 .logo a,
@@ -29,9 +29,7 @@ h1, h2, h3 {
     font-family: 'Chetta Vissto', sans-serif !important;
 }
 
-/* ==========================================================================
-   NAVBAR
-   ========================================================================== */
+
 nav {
     display: flex;
     justify-content: space-between; 
@@ -51,6 +49,7 @@ nav {
 .nav-links {
     display: flex;
     gap: 30px;                      
+    list-style: none;
 }
 
 .nav-links a {
@@ -65,28 +64,84 @@ nav {
 .nav-links a:hover {
     color: #c48b71;                 
 }
-/* --- PAGINA ATTIVA NELLA NAVBAR --- */
+
 .nav-links a.active {
-    color: #ab775f;            /* Colore pesca/marrone caldo coerente con il tuo brand */
-    font-weight: 700;          /* Rende il testo più spesso (bold) per dare enfasi */
-    border-bottom: 2px solid #c48b71; /* Opzionale: aggiunge una linea sottile sotto la voce attiva */
-    padding-bottom: 4px;       /* Spazio tra il testo e la linea sotto */
+    color: #ab775f;            
+    font-weight: 700;          
+    border-bottom: 2px solid #c48b71; 
+    padding-bottom: 4px;       
 }
-/* ==========================================================================
-   STRUTTURA MAIN E SEZIONI (Layout per Desktop)
-   ========================================================================== */
-main {
+
+.nav-links .dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown-menu {
+    display: none;                  
+    position: absolute;             
+    top: 100%;                      
+    left: 50%;
+    transform: translateX(-50%);    
+    list-style: none;    
+    padding: 10px 0;
+    margin-top: 15px;  
+    min-width: 220px;               
+    background: rgba(252, 239, 231, 0.75); 
+    border: 1px solid rgba(255, 255, 255, 0.4); 
+    border-radius: 12px;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0px 8px 24px rgba(19, 31, 103, 0.15); 
+    z-index: 9999;
+}
+
+.nav-links .dropdown-menu li {
+    display: block;
+    width: 100%;
+}
+
+.nav-links .dropdown-menu a {
+    color: #131F67; 
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 12px 25px;
+    display: block;       
+    text-align: left;   
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-links .dropdown-menu a:hover {
+    background: rgba(255, 255, 255, 0.4); 
+    color: #AB775F; 
+}
+
+.nav-links .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Spaziatura standard per tutte le sezioni principali */
+.nav-links .dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+}
+
+
+main {
+    display: block;
+    flex: 1; 
+}
+
 .hero, .intro, .cardhome, .home, .storiahome, .tipi-pelle-sezione {
     padding-left: 10%;
     padding-right: 10%;
     margin-bottom: 80px;
 }
 
-/* --- 1. HERO SECTION --- */
 .hero {
     display: flex;
     background-color: #fcefe6; 
@@ -122,7 +177,6 @@ main {
     object-fit: cover;
 }
 
-
 .intro {
     max-width: 70%; 
 }
@@ -132,7 +186,6 @@ main {
     line-height: 1.6;
     color: #1a2a5a;
 }
-
 
 .cardhome h2 {
     color: #1a2a5a;
@@ -146,8 +199,7 @@ main {
     gap: 20px;
 }
 
-.card1 
- {
+.card1 {
     background-color: #f9f5f0; 
     padding: 30px 24px;       
     border-radius: 16px;      
@@ -159,10 +211,20 @@ main {
     transition: transform 0.2s ease, background-color 0.2s ease; 
 }
 
-.card1:hover, .card-pelle
- {
+.card1:hover, .card-pelle:hover {
     background-color: #f5ede4; 
     transform: translateY(-4px); 
+}
+
+.card-pelle {
+    background-color: #f9f5f0; 
+    padding: 25px 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .card-icon {
@@ -228,7 +290,13 @@ main {
     object-fit: cover;
 }
 
-/* --- 4B. NUOVA SEZIONE AUTONOMA TIPI DI PELLE (Sotto l'immagine) --- */
+.imgfinale {
+    width: 100%;
+    height: 350px;
+    display: block;
+    object-fit: cover;
+}
+
 .tipi-pelle-sezione {
     width: 100%;
     clear: both;
@@ -241,16 +309,6 @@ main {
     width: 100%;
 }
 
-.card-pelle {
-    background-color: #f9f5f0; 
-    padding: 25px 20px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    text-align: left;
-}
-
 .num-pelle {
     font-size: 20px;
     font-weight: 700;
@@ -261,22 +319,22 @@ main {
     font-size: 15px;
     font-weight: 700;
     color: #131F67;
-    text-decoration: underline; 
+    text-decoration: none; 
     line-height: 1.3;
 }
 
 .pelle-link:hover {
     color: #c48b71;
+    text-decoration: none; 
 }
 
 .card-pelle p {
     font-size: 13px;
     color: #718096;
-    margin: 0 !important;
+    margin: 0; 
     line-height: 1.4;
 }
 
-/* --- BOTTONI GENERALI --- */
 .button {
     display: inline-block;
     background-color: #1a2a5a;
@@ -295,13 +353,15 @@ main {
 .button:hover {
     background-color: #c48b71;
 }
+
 .itinerary-list {
     list-style-type: initial;
     padding-left: 20px;
-    margin-bottom: 30px; /* Aumentato da 20px a 30px per spingere il bottone ancora più giù */
+    margin-bottom: 30px; 
     color: #4a5568;
 }
-/* --- 5. SEZIONE STORIAHOME / STEP --- */
+
+
 .header-storia {
     display: flex;
     justify-content: space-between;
@@ -317,22 +377,16 @@ main {
     max-width: 60%;
 }
 
-.header-storia-centrato {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.header-storia-centrato h2 {
-    font-size: 32px;
-    color: #1a2a5a;
-    max-width: 100%;
-}
-
 .card-container-numerati {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card-container-trattamenti {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
     gap: 30px;
     margin-bottom: 40px;
 }
@@ -365,6 +419,92 @@ main {
     line-height: 1.6;
 }
 
+.detail-list-acneica { 
+    font-size: 14px;
+    color: #4a5568;
+    line-height: 1.6;
+    padding-left: 15px;       
+    margin-top: 5px;    
+    margin-bottom: 0;   
+}
+
+.detail-list-acneica li {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+    padding: 0 !important;
+    line-height: 1.6;
+}
+
+/* Elenco puntato interno alle card (Es: Card 03) */
+.lista-card-interna {
+    list-style-type: disc;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.lista-card-interna li {
+    font-size: 14px;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   STRUTTURA TITOLI CENTRATI (Risolto bug sovrapposizione Desktop)
+   ========================================================================== */
+.header-storia-centrato {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+    gap: 12px; /* Crea spazio automatico tra H2 e H3 senza collassi */
+}
+
+.header-storia-centrato h2 {
+    font-size: 32px;
+    color: #1a2a5a;
+    margin: 0;
+    padding: 0;
+}
+
+.header-storia-centrato h3 {
+    font-size: 16px;
+    color: #4a5568;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.card-container-trattamenti-bicolonna {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card-storia h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #131F67;
+}
+
+.lista-prima-dopo {
+    list-style-type: disc;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+}
+
+.lista-prima-dopo li {
+    font-size: 15px;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
 .icon-sub {
     font-size: 20px;
     margin-left: 5px;
@@ -374,10 +514,12 @@ main {
 /* --- FOOTER --- */
 footer {
     background-color: #1a2a5a; 
-    padding: 40px 10%;
+    padding: 30px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    margin-top: auto; 
 }
 
 footer .logo a {
@@ -400,9 +542,8 @@ footer .nav-links a:hover {
 }
 
 body.detail-page {
-    background-color: #fcefe7; /* Tonalità rosa cipria chiarissimo dello screenshot */
+    background-color: #fcefe7; 
 }
-
 
 .detail-hero {
     display: flex;
@@ -440,19 +581,17 @@ body.detail-page {
     margin-bottom: 20px;
 }
 
-
 .scelte-sezione, .consigli-sezione {
     padding: 0 10%;
     margin-bottom: 60px;
 }
 
 .scelte-sezione h2, .consigli-sezione h2 {
-    font-family: 'Inter', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 28px;
     color: #131F67;
     margin-bottom: 40px;
 }
-
 
 .detail-list {
     list-style-type: initial;
@@ -469,6 +608,28 @@ body.detail-page {
     line-height: 1.4;
 }
 
+.toplist-trattamenti p, 
+.toplist-trattamenti .detail-list-trattamenti li {
+    font-size: 16px;
+    color: #4a5568;
+    line-height: 1.6; 
+}
+
+.toplist-trattamenti h2 {
+    font-size: 32px;
+    color: #1a2a5a;
+    margin-bottom: 20px;
+}
+
+.toplist-trattamenti .detail-list-trattamenti {
+    margin-top: 10px;      
+    margin-bottom: 12px;   
+    padding-left: 20px; 
+    display: flex;
+    flex-direction: column;
+    gap: 6px;              
+    list-style-type: initial; 
+}
 
 .texture-gallery {
     padding: 0 10%;
@@ -487,7 +648,6 @@ body.detail-page {
     object-fit: cover;
     border-radius: 4px;
 }
-
 
 .next-skin-section {
     padding: 0 10%;
@@ -530,7 +690,6 @@ body.detail-page {
     border-radius: 4px;
 }
 
-
 .button-dark {
     display: inline-block;
     background-color: #131F67;
@@ -548,11 +707,13 @@ body.detail-page {
     background-color: #c48b71;
 }
 
-
+/* ==========================================================================
+   MEDIA QUERIES (Responsive Smartphone)
+   ========================================================================== */
 @media screen and (max-width: 768px) {
     .detail-hero {
         flex-direction: column;
-        text-align: center;
+        text-align: left; 
         padding: 40px 5%;
         gap: 30px;
     }
@@ -580,21 +741,49 @@ body.detail-page {
     .next-text h2 {
         font-size: 36px;
     }
+
+    /* ALLINEAMENTO TITOLI A SINISTRA SU MOBILE CON SPAZIATURA PADDING */
     .header-storia-centrato {
-        text-align: center;
-        margin-bottom: 20px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important; 
+        text-align: left !important;         
+        margin-bottom: 25px;
+        width: 100%;
+        /* Aggiungiamo il padding così il titolo si allinea perfettamente alle card sottostanti */
+        padding-left: 5% !important; 
+        padding-right: 5% !important;
+        gap: 8px !important;
     }
-    .hero, .intro, .cardhome, .home, .storiahome, .tipi-pelle-sezione, nav, footer {
+
+    .header-storia-centrato h2 {
+        font-size: 26px !important; 
+        text-align: left !important;
+    }
+
+    .header-storia-centrato h3 {
+        font-size: 14px !important;
+        text-align: left !important;
+    }
+
+    /* Gestione sezioni generali mobile */
+    .hero, .intro, .cardhome, .home, .storiahome, .tipi-pelle-sezione {
         padding-left: 5%;
         padding-right: 5%;
         margin-bottom: 50px; 
     }
 
+    /* Rimuove l'eccesso di spazio per i titoli che sono già dentro .storiahome */
+    .storiahome .header-storia-centrato {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
     nav {
         flex-direction: column; 
         gap: 15px;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding: 20px 5% 10px 5%;
+        background-color: transparent; 
     }
 
     .nav-links {
@@ -606,7 +795,8 @@ body.detail-page {
 
     .hero {
         flex-direction: column; 
-        text-align: center;
+        text-align: left; 
+        padding-top: 40px; 
     }
 
     .hero .img {
@@ -626,22 +816,46 @@ body.detail-page {
         font-size: 18px;
     }
 
-    .card-container, .card-container-numerati, .tipi-pelle-grid {
+    .card-container, .tipi-pelle-grid {
         grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+
+    .card-container-numerati {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card-container-trattamenti {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+
+    .card-container-trattamenti-bicolonna {
+        grid-template-columns: 1fr !important; 
         gap: 20px;
     }
 
     .home {
         flex-direction: column; 
-        gap: 20px;
+        gap: 30px;
     }
 
     .home:nth-of-type(odd) {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .img {
         width: 100%;
+        height: auto; 
+        aspect-ratio: 16 / 10; 
+    }
+
+    .imgfinale {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 10; 
+        display: block;
     }
 
     .header-storia {
@@ -659,14 +873,18 @@ body.detail-page {
         flex-direction: column;
         gap: 20px;
         text-align: center;
+        padding: 40px 5%;
+    }
+
+    footer .nav-links {
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+        gap: 20px;
     }
 
     footer .nav-links a {
-        margin: 0 15px; 
-    }
-    .gallery-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        margin: 0; 
     }
 
     .gallery-grid img {
@@ -678,5 +896,56 @@ body.detail-page {
     .next-img img {
         height: auto; 
         max-height: 240px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    /* ... altre tue regole mobile esistenti ... */
+
+    /* FORZATURA ALLINEAMENTO A SINISTRA SEZIONE FINALE */
+    .home {
+        display: flex !important;
+        flex-direction: column !important; /* Mette prima il testo e sotto l'immagine */
+        align-items: flex-start !important; /* Allinea il blocco a sinistra */
+        width: 100% !important;
+        gap: 20px !important;
+    }
+
+    .toplist-trattamenti {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important; /* Forza titolo, testo e bottone a sinistra */
+        text-align: left !important;         /* Evita che i testi restino centrati */
+        width: 100% !important;
+        padding: 0 !important;              /* Sfrutta il padding già presente in .home */
+    }
+
+    .toplist-trattamenti h2 {
+        text-align: left !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: auto !important;
+    }
+
+    .toplist-trattamenti p {
+        text-align: left !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: auto !important;
+    }
+
+    /* Rallinea anche il bottone a filo sinistro */
+    .toplist-trattamenti .button {
+        margin-top: 15px !important;
+        margin-left: 0 !important;  /* Rimuove eventuali margini automatici che lo accentrano */
+        align-self: flex-start !important; /* Forza il bottone flex a sinistra */
+    }
+
+    /* L'immagine sotto il bottone prende tutta la larghezza */
+    .home .img {
+        width: 100% !important;
+        height: auto !important;
+        margin-top: 20px !important;
     }
 }

@@ -3,34 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skincare Base - my Skin</title>
+    <title>Pelle Mista - my Skin</title>
     <link rel="stylesheet" href="style.css">
-   
-<body>
+</head>
+<body class="detail-page">
+
     <nav>
         <div class="nomesito"> 
             <a href="index.html">my Skin</a> 
         </div> 
-        <div class="nav-links">
-            <a href="skincarebase.html">Skincare base</a>
-            <a href="trattamentiviso.html >Trattamenti viso</a>
-            <a href="prodotti.html">Prodotti</a>
-            <a href="erroricomuni.html">Errori comuni</a>
-        </div> 
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="skincarebase.html" class="active">Skincare base</a>
+                <ul class="dropdown-menu">
+                    <li><a href="pellenormale.html">Skincare routine pelle normale</a></li>
+                    <li><a href="pellemista.html">Skincare routine pelle mista</a></li>
+                    <li><a href="pellegrassa.html">Skincare routine pelle grassa</a></li>
+                    <li><a href="pellesecca.html">Skincare routine pelle secca</a></li>
+                    <li><a href="pellesensibile.html">Skincare routine pelle sensibile</a></li>
+                    <li><a href="pelleacneica.html">Skincare routine pelle acneica</a></li>
+                </ul>
+            </li>
+            <li><a href="trattamentiviso.html">Trattamenti viso</a></li>
+            <li><a href="prodotti.html">Prodotti</a></li>
+            <li><a href="erroricomuni.html">Errori comuni</a></li>
+        </ul> 
     </nav>
     
     <main>
-    
+        <section class="detail-hero">
+            <div class="detail-hero-img">
+                <img src="pelleacneica.png" alt="Dettaglio pelle acneica">
+            </div>
+            <div class="detail-hero-text">
+                <h1>Pelle acneica</h1>
+                <p> Sia che tu abbia macchie persistenti dovute agli inestetismi post-acneici oppure occasionali aree problematiche e brufoletti, è essenziale utilizzare una routine skincare che aiuti a trattare le macchie esistenti aiutando anche a prevenire le imperfezioni future.</p>
+                <p>Scopri come prenderti cura del tuo viso.</p>
+            </div>
+        </section>
 
-        <footer>
-            <div class="logo">
-                <a href="index.html">my Skin</a>
+        <section class="scelte-sezione">
+            <h2>Cosa scegliere</h2>
+            
+            <div class="card-container-numerati">
+                <div class="card-storia">
+                    <span class="numero">01</span>
+                    <h3>Crema idratante</h3>
+                    <p>Una crema idratante e allo stesso tempo rinfrescante,
+                      con formulazione in gel potrebbe essere il tuo alleato più prezioso. 
+                      <br>La sua formulazione aiuta ad idratare il viso offrendo un effetto no-shine.</p>
+                </div>
+                
+                <div class="card-storia">
+                    <span class="numero">02</span>
+                    <h3>Crema illuminante e levigante</h3>
+                    <p>La crema agisce su tutti i tipi di pelle illuminando e levigando allo stesso tempo; 
+                       studiata per andare a combattere la disidratazione, lascia la <strong>pelle nutrita per 24 ore</strong>ma è preziosa anche nella lotta alla comparsa di discromie.</p>
+
+                </div>
+                
+                <div class="card-storia">
+                    <span class="numero">03</span>
+                    <h3>Lozione idratante a rapido assorbimento</h3>
+                    <p>Una <strong>lozione idratante</strong> ma <strong>con</strong> una <strong>formula</strong> che si <strong>assorbe rapidamente</strong>, 
+                      va ad idratare in modo bilanciato la pelle grassa. Leggerissima, va a ridurre l’effetto lucido senza risultare aggressiva nella formulazione.</p>
+                    
+                </div>
             </div>
-            <div class="nav-links">
-                <a href="#">Privacy</a>
-                <a href="#">Fonti</a>
+        </section>
+
+        <section class="texture-gallery">
+            <div class="gallery-grid">
+                <img src="dettaglio5.jpg" alt="Texture idratante delicata">
+                <img src="dettaglio6.jpg" alt="Flacone tonico calendula">
+                <img src="dettaglio7.jpg" alt="Dettaglio texture crema cica">
             </div>
-        </footer>
+        </section>
+
+        <section class="consigli-sezione">
+            <h2>Consigli aggiuntivi</h2>
+            
+            <div class="card-container-numerati">
+                <div class="card-storia">
+                    <span class="numero">01</span>
+                    <h3>Esfolia con attenzione</h3>
+                    <p>Una esfoliazione chimica leggera (AHA/BHA) può aiutare a liberare i pori e migliorare la texture della pelle. 
+                    <br>Ma non più di 1-2 volte a settimana, altrimenti rischi irritazione.</p>
+                </div>
+                <div class="card-storia">
+                    <span class="numero">02</span>
+                    <h3>Protezione solare</h3>
+                    <p>Molti attivi anti-acne rendono la pelle più sensibile al sole.
+                    <br>Usa una SPF 30 o più e soprattutto una formula non comedogenica.</p>
+                </div>
+                <div class="card-storia">
+                    <span class="numero">03</span>
+                    <h3>Non toccare o spremere i brufoli</h3>
+                    <p>Spremere i brufoli aumenta il rischio di:</p>
+                    <ul class="detail-list-acneica">
+                        <li>cicatrici;</li>
+                        <li>infezioni;</li>
+                        <li>macchie post-infiammazione.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="next-skin-section">
+            <div class="next-skin-box">
+                <div class="next-text">
+                    <h2>Pelle sensibile</h2>
+                    <p>Se hai la pelle sensibile, che presenta spesso rossori, secchezza, <br> 
+                    sfoghi o infiammazioni, cerca formule skincare per lenire e rafforzare <br> 
+                    la barriera cutanea.</p>
+                    <a href="pellesensibile.html" class="button-dark">Scopri di più</a>
+                </div>
+                <div class="next-img">
+                    <img src="pellesensibile.png" alt="Anteprima pelle sensibile">
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    <footer>
+        <div class="logo">
+            <a href="index.html">my Skin</a>
+        </div>
+        <div class="nav-links">
+            <a href="#">Privacy</a>
+            <a href="#">Fonti</a>
+        </div>
+    </footer>
 </body>
 </html>
