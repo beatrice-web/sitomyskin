@@ -12,7 +12,7 @@
 }
 
 body {
-    
+    font-family: 'Inter', sans-serif;
     background-color: #fdfaf7; 
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@ h1, h2, h3 {
     font-family: 'Inter', sans-serif;
 }
 
-.nomesito a, 
+.nomesito a, .nomesito, 
 .logo a,
 .hero-text h1 {
     font-family: 'Chetta Vissto', sans-serif !important;
