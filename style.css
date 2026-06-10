@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #fdfaf7; 
     display: flex;
     flex-direction: column;
@@ -56,7 +56,7 @@ nav {
     font-size: 16px;
     color: #131F67;                 
     text-decoration: none;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     transition: color 0.3s ease;
 }
