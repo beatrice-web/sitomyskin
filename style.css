@@ -5,7 +5,7 @@
 }
 
 @font-face {
-    font-family: 'Chetta Vissto';
+    font-family: 'ChettaVissto';
     src: url('ChettaVissto.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -26,7 +26,7 @@ h1, h2, h3 {
 .nomesito a, .nomesito, 
 .logo a,
 .hero-text h1 {
-    font-family: 'Chetta Vissto', sans-serif !important;
+    font-family: 'ChettaVissto', sans-serif !important;
 }
 
 
