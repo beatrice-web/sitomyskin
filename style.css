@@ -6,11 +6,10 @@
 
 @font-face {
     font-family: 'Chetta Vissto';
-    src: url('ChettaVissto.woff2') format('woff2');
+    src: url('ChettaVissto.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
 
 body {
     font-family: 'Inter', sans-serif;
